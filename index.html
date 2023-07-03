@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- -----Header Section----- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">A<span>man.</span></a>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#edu">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="bx bx-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="bx bx-menu" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Aman</span> Marve</h1>
+                <div class="text-animate">
+                    <h3>Frontend Web Devloper</h3><br>
+                    <p>Make it work, make it right, make it fast.<br> <span> – Kent Beck</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------About----------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/About.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Welcome, to My portfolio.I Am a Front End Developer with Strong coding And Programming Skills
+                        .Proficiency in web technologies like HTML5, CSS3, JavaScript & Also Familiar with React and
+                        SQL.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------Education-------- -->
+
+    <div id="edu">
+        <div class="container">
+            <h1 class="sub-title">Educations</h1>
+            <div class="education-list">
+                <div>
+                    <i class='bx bxs-graduation'></i>
+                    <h2>Bachlore Of Science in Information Technology</h2>
+                    <p>From Sardar Patel Mahavidyalay in 2019-2022</p>
+                </div>
+
+                <div>
+                    <i class='bx bxs-graduation'></i>
+                    <h2>Higher Secondary School Certificate(12th)</h2>
+                    <p>From Nehru Science Junior College in 2017-2019</p>
+
+                </div>
+
+                <div>
+                    <i class='bx bxs-graduation'></i>
+                    <h2>Secondary School Certificate(10th)</h2>
+                    <p>From Hindi City Higher Secondary School in 2017</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------Skills-------- -->
+
+    <div id="skills">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="skill-list">
+                <div class="skill">
+                    <img src="skills logo/HTML.png">
+                    <div class="layer">
+                        <h3>HTML</h3>
+                        <p>HTML is the language for describing the structure of Web pages.</p>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <img src="skills logo/CSS.png">
+                    <div class="layer">
+                        <h3>CSS</h3>
+                        <p>CSS is the acronym of “Cascading Style Sheets”. CSS is a computer language for laying out and
+                            structuring web pages (HTML or XML).</p>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <img src="skills logo/JavaScript.png">
+                    <div class="layer">
+                        <h3>JavaScript</h3>
+                        <p>JavaScript is a scripting language that enables you to create dynamically updating content,
+                            control multimedia, animate images, and pretty much everything else.</p>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <img src="skills logo/React.png">
+                    <div class="layer">
+                        <h3>React</h3>
+                        <p>React can be used to build web, mobile, and desktop applications, making it a versatile
+                            framework for cross-platform development.</p>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <img src="skills logo/SQL.png">
+                    <div class="layer">
+                        <h3>SQL</h3>
+                        <p>SQL is used to communicate with a database. According to ANSI (American National Standards
+                            Institute), it is the standard language for relational database management systems.</p>
+
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- --------Contact-------- -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><a href="mailto: Aman1.marve@gmail.com"><i class='bx bxs-envelope'></a></i>Aman1.marve@gmail.com</p>
+                    <p><a href="tel:928-433-7852"><i class='bx bxs-phone'></i></a></i>9284337852</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/aman-marve-725565219/"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/settings/repositories"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.facebook.com/aman.marve.77/"><i class='bx bxl-facebook'></i></a>
+                    </div>
+
+                    <a href="Aman Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="sumbit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----footer----- -->
+
+    <div class="copyright">
+        <p>Copyright © Aman. <i class='bx bx-code-alt'></i></p>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzMF2CTFyuQD7FrNCH9JAxIvbBEl_epYM2zVwctvyDVbpWY95Xg8GuQtGq9hJ_l4bcAag/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message Sent Successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
