@@ -326,7 +326,8 @@ nav ul li a:hover::after {
 
 .btn:hover {
     background: #00abf0;
-    transition: 0.5s;
+    transition: 0.01s;
+    width: fit-content;
 }
 
 /* -----contact----- */
