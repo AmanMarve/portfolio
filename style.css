@@ -11,14 +11,15 @@ html {
 }
 
 body {
-    background: black;
-    color: rgb(250, 248, 248);
+    background: rgb(0, 3, 9);
+    color: white;
+    overflow-x: hidden;
+
 }
 
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(IMG/home.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -27,9 +28,10 @@ body {
     width: 1.4rem;
     position: relative;
     font-size: 2.5rem;
-    color: #00abf0;
+    color: white;
     text-decoration: none;
     font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .logo span {
@@ -68,7 +70,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #00abf0;
+    background: #7c66e3;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -84,30 +86,95 @@ nav ul li a:hover::after {
     font-size: 30px;
 }
 
+.header-text::after,
+.header-text::before {
+    content: '';
+    width: 20.125rem;
+    height: 20.125rem;
+    border-radius: 20.125rem;
+    background: #7c66e3;
+    position: absolute;
+    z-index: -1;
+    filter: blur(150px);
+}
+
+.header-text::after {
+    top: -1rem;
+    left: 5rem;
+}
+
+.header-text::before {
+    bottom: 3rem;
+    right: 4rem;
+    width: 28.125rem;
+    height: 28.125rem;
+}
+
 .header-text h1 {
     font-size: 4rem;
     margin-top: 20px;
 }
 
 .header-text p {
-    font-family: 'Ysabeau Office', sans-serif;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.header-text p span{
-    font-family: 'Ysabeau Office', sans-serif;
+.row1 {
+    margin-top: -5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col1 {
+    flex-basis: 60%;
+}
+
+.col2 {
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    bottom: 70px;
+    right: 0px;
+}
+
+.col2 img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.col2 img.Aman {
+    width: 90%;
+    height: 130%;
+    top: -60px;
+}
+
+.col2:hover .circle {
+    bottom: 40px;
+}
+
+.col2:hover .Aman {
+    left: 45%;
 }
 
 .text-animate {
     position: relative;
     width: 32.8rem;
-
 }
 
-.text-animate h3 {
+.text-animate {
     font-size: 2rem;
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: .7px #00abf0;
+    -webkit-text-stroke: .7px #7c66e3;
 }
 
 /* ---------About----------- */
@@ -116,6 +183,7 @@ nav ul li a:hover::after {
     padding: 80px 0;
     color: #fff;
 }
+
 
 .row {
     display: flex;
@@ -196,7 +264,7 @@ nav ul li a:hover::after {
 
 /* --------------Edu-------------- */
 
-#edu{
+#edu {
     padding: 30px 0;
 }
 
@@ -237,7 +305,7 @@ nav ul li a:hover::after {
 }
 
 .education-list div:hover {
-    background: #00abf0;
+    background: #7c66e3;
     transform: translateY(-10px);
 }
 
@@ -250,8 +318,13 @@ nav ul li a:hover::after {
 .skill-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    grid-gap: -20%;
+    align-items: center;
+    justify-items: center;
     margin-top: 50px;
+    padding-top: 30px;
+    padding-left: -50px;
+    padding: 10px;
 }
 
 .skill {
@@ -260,56 +333,25 @@ nav ul li a:hover::after {
     overflow: hidden;
 }
 
+.skill:hover {
+    border: 3px solid rgb(85, 20, 151);
+}
+
 .skill img {
-    width: 100%;
+    width: 80%;
+    padding-left: 15px;
     border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-}
-
-.layer {
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), #00abf0);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
+    box-sizing: content-box;
+    padding: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* padding: 0 40px; */
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
+    position: relative;
 }
 
-.layer h3 {
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.layer a {
-    margin-top: 20px;
-    color: #00abf0;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
 
 .skill:hover img {
-    transform: scale(1.1);
-}
-
-.skill:hover .layer {
-    height: 100%;
+    overflow: visible;
+    transition: .5s;
+    transform: scale(1.2);
 }
 
 .btn {
@@ -326,7 +368,8 @@ nav ul li a:hover::after {
 
 .btn:hover {
     background: #00abf0;
-    transition: 0.5s;
+    transition: 0.01s;
+    width: fit-content;
 }
 
 /* -----contact----- */
@@ -415,14 +458,31 @@ nav .bx {
     display: none;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:450px) {
     #header {
-        background-image: url(IMG/home-phone.jpg);
+        background-image: url(IMG/home-phone.png);
+    }
+
+    .header-text::after,
+    .header-text::before {
+        content: '';
+        width: 10.125rem;
+        height: 20.125rem;
+        border-radius: 10.125rem;
+        background: #7c66e3;
+        position: absolute;
+        z-index: -1;
+        filter: blur(200px);
     }
 
     .header-text h1 {
         margin-top: 150%;
         font-size: 40px;
+    }
+
+    .row1 .col2 {
+        height: 0px;
+        width: 0px;
     }
 
     .text-animate h3 {
@@ -434,8 +494,9 @@ nav .bx {
         font-size: 25px;
     }
 
+
     nav ul {
-        background: #00abf0;
+        background: #7c66e3;
         position: absolute;
         top: 0;
         right: -200px;
